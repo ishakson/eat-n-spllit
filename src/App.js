@@ -41,6 +41,7 @@ function FriendsList({ friends }) {
 
 function Friend({ friend }) {
   return (
+    <>
     <li>
       <img src={friend.image} alt={friend.name} />
       <h3>{friend.name}</h3>
@@ -55,7 +56,24 @@ function Friend({ friend }) {
         </p>
       )}
       {friend.balance === 0 && <p>You and {friend.name} are even</p>}
-      <button className="button">Select</button>
+      <Button>Selecet</Button>
     </li>
+      <FormAddFriend/>
+      </>
+  );
+}
+
+function Button({children}){
+  return <button className="button">{children}</button>
+}
+
+function FormAddFriend({onSubmit}){
+  return (
+    <form className="for-add-friend" onSubmit={onSubmit}>
+      <label>Friend's Name</label>
+      <input type="text" placeholder="Name" />
+      <label>Friend's Image Url</label>
+      <input type="text" placeholder="Image" />
+    </form>
   );
 }
