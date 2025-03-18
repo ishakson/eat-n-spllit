@@ -72,10 +72,11 @@ function Button({children}){
 function FormAddFriend({onSubmit}){
   return (
     <form className="for-add-friend" onSubmit={onSubmit}>
-      <label>Friend's Name</label>
+      <label>Frined's Name</label>
       <input type="text" placeholder="Name" />
       <label>Friend's Image Url</label>
       <input type="text" placeholder="Image" />
+      <Button>Add</Button>
     </form>
   );
 }
