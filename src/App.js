@@ -31,17 +31,20 @@ export default function App() {
 
 function FriendsList({ friends }) {
   return (
+    <>
     <ul>
       {friends.map((friend) => (
         <Friend key={friend.id} friend={friend} />
       ))}
     </ul>
+    <FormAddFriend/>
+      </>
   );
 }
 
 function Friend({ friend }) {
   return (
-    <>
+   
     <li>
       <img src={friend.image} alt={friend.name} />
       <h3>{friend.name}</h3>
@@ -58,8 +61,7 @@ function Friend({ friend }) {
       {friend.balance === 0 && <p>You and {friend.name} are even</p>}
       <Button>Selecet</Button>
     </li>
-      <FormAddFriend/>
-      </>
+      
   );
 }
 
