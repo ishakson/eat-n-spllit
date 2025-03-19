@@ -53,7 +53,7 @@ export default function App() {
       </div>
       {selectedFriend && <FormSplitBill selectedFriend={selectedFriend} />}
     </div> 
-  );
+  ); 
 }
 
 function FriendsList({ friends, onSelectFriend, selectedFriend }) {
