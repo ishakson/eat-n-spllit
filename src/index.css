@@ -131,11 +131,7 @@ label {
   font-weight: 500;
 }
 
-label::first-letter {
-  display: inline-block;
-  margin-right: 4px;
-  font-size: 1.8rem;
-}
+
 
 input,
 select {
